@@ -1,0 +1,87 @@
+.img-link {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .img-link img {
+    display: block;
+    width: 100%;
+  }
+  
+  .img-link::before {
+    content: "CSS Animations!";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+  
+  .img-link:hover::before {
+    opacity: 1;
+  }
+  
+  .img-link:hover img {
+    transform: scale(1.1);
+  }
+
+  .img-link:active img{
+    animation: shake 0.3s ease-in-out;
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(5px, -5px);
+    }
+    50% {
+      transform: translate(-5px, 5px);
+    }
+    75% {
+      transform: translate(5px, -5px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    margin: center;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
